@@ -1,35 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial</title>
-
-
-</head><body>
-    
-<h1> Open Console</h1>    <script>
-const number = parseInt(prompt('Enter a positive integer: '));
-
-
-if (number < 0) {
-    console.log('Error! Factorial for negative number does not exist.');
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime number </title>
+</head>
+<style>
+body{
+  background-color: rgb(132, 3, 172);
 }
-
-
-else if (number === 0) {
-    console.log(`The factorial of ${number} is 1.`);
+h1{
+  text-align: center;
 }
+</style>
+<body>
+  <h1>open console</h1>
+  <script>
+    var num = prompt("Enter to check prime number");
+    if (num == 1) {
+      console.log(num + " is not a prime number or composite number");
+    } else {
+      for (var i = 2; i < num; i = i + 1) {
+        if (num % i == 0) {
+          var result = (num + " is not a prime number");
+          break;
+        } else {
+          var result = (num + " is a prime number");
+        }
+      }
 
-
-else {
-    let fact = 1;
-    for (i = 1; i <= number; i++) {
-        fact *= i;
+      console.log(result);
     }
-    console.log(`The factorial of ${number} is ${fact}.`);
-}</script>
+  </script>
+
 </body>
+
 </html>
